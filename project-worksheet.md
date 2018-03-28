@@ -1,7 +1,3 @@
-# project1
-Project 1 - Unit 1 (WDI)
-
-
 # Project Overview
 
 ## Project Schedule
