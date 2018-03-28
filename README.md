@@ -1,7 +1,3 @@
-# project1
-Project 1 - Unit 1 (WDI)
-
-
 # Project Overview
 
 ## Project Schedule
@@ -36,16 +32,17 @@ In the game view, you will have a cone positioned at the bottom of the screen. I
 ## Wireframes
 
 Include images of your wireframes. 
-![wire-fame](images/fullPage.JPG)
-![wire-fame](images/form.JPG)
-![wire-fame](images/landing.JPG)
-![wire-fame](images/game.JPG)
-![wire-fame](images/alert.JPG)
+![wire-fame](http://res.cloudinary.com/daracell/image/upload/v1522243220/Images/fullPage.jpg "Full Page Wire Frame")
+![wire-fame](http://res.cloudinary.com/daracell/image/upload/v1522243219/Images/form.jpg "Form View")
+![wire-fame](http://res.cloudinary.com/daracell/image/upload/v1522243220/Images/landing.jpg "Landing View")
+![wire-fame](http://res.cloudinary.com/daracell/image/upload/v1522243219/Images/game.jpg "Game View")
+![wire-fame](http://res.cloudinary.com/daracell/image/upload/v1522243219/Images/alert.jpg "Alert")
+
 
 ## Priority Matrix
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matix. 
-![wire-fame](images/matrix.JPG) 
+![wire-fame](http://res.cloudinary.com/daracell/image/upload/v1522243220/Images/matrix.jpg "Matrix") 
 
 ## Game Components
 
@@ -98,8 +95,6 @@ Whether win or lose, the player can choose to replay the game and start over.
 When the player wins, the alert shows up ('You win!'). When the player loses, the alert shows up ('You lose!'). There will be a 'replay' button that appears on the screen, which resets the game and allows the player to return to game view at the start and resets the score to 0. 
 
  
-
-The 
 
 ## MVP 
 
