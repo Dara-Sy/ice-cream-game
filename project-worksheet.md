@@ -95,8 +95,6 @@ When the player wins, the alert shows up ('You win!'). When the player loses, th
 
  
 
-The 
-
 ## MVP 
 
 Include the full list of features that will be part of your MVP 
