@@ -1,2 +1,115 @@
-nvbmnrbvnmrb vjrtjkb;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ICE CREAM SCOOPS!</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="jquery-3.3.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
 
+
+<!-- CURRENTLY COMMENTING OUT LANDING VIEW TO WORK ON GAME VIEW -->
+
+<!-- LANDING VIEW -->
+<div id = "landingView">
+  <h1> ICE CREAM SCOOPS! </h1>
+  <section>
+
+    <div id = "landing">
+        <div class = "landCone">
+         <img src = "pics/landingcone.png" width = "100">
+        </div>
+
+
+      <button> START GAME </button>
+        <div class = "landCone1">
+           <img src = "pics/landingcone.png" width = "100">
+          </div>
+    </div>
+  </section>
+</div>
+
+<!-- GAME VIEW -->
+
+<!-- <canvas id = "canv"> </canvas> -->
+
+  <!-- <h1> GAME VIEW </h1> -->
+
+  <div id = "gameView"> <!--  parent div id -->
+
+    <section>
+
+  <!-- this is the cone -->
+  <img id = "cone" src = "pics/coneImg.png" height = "150">
+    </div>
+
+    <!-- <body onload="myMove()"> -->
+      <!-- <button onclick="myMove()">Click Me</button> -->
+
+    <!-- this is the scoop -->
+    <div id ="myAnimation">
+
+      <div class = "scoopRef">
+        <img id = "scoop" src = "pics/vanilla-.png" width="80">
+        </div>
+      <div class = "scoopRef">
+          <img id = "scoop" src = "pics/mintc.png" width="80">
+      </div>
+       <div class = "scoopRef">
+          <img src = "pics/cc.png" width="80">
+      </div>
+      <div class = "scoopRef">
+          <img src = "pics/choco.png" width="80">
+      </div>
+      <div class = "scoopRef">
+          <img src = "pics/strawberry.png" width="80">
+      </div> <!-- closes scoopRef
+ -->
+      </div> <!-- closes myAnimation -->
+
+
+
+
+
+    </section>
+
+</div>
+
+<div class = "collide"> </div>
+
+
+
+
+
+<!--
+// CONE
+// create a div for the CONE
+
+// make the cone an array on JS
+// create a key press function event
+// the key press event will do the following:
+// left arrow moves the cone to the left
+// right arrow moves the cone to the right
+
+// ICE CREAM SCOOPS
+// create many divs - one div for each ice cream scoop each
+// deciding whether to make the ice cream scoops circles... or use a scoop image
+// this will control the timing of the ice cream scoops falling on the screen
+
+// create a setInterval( function NAME, _________ set the ms time)
+// use a constructor function NAME to increment the y coordinates (moving down)
+// and cause the ice cream scoops to fall down the screen
+ -->
+
+
+
+
+
+
+<!-- Here is a link to the JS file  -->
+<script src="index.js"></script>
+</body>
+</html>
