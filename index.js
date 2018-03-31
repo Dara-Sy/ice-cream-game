@@ -38,6 +38,21 @@ $('button').click(function(e) {
 
 
 });
+function move() {
+  let x = $('#scoop').css('margin-top');
+  let y= $('#cone').css('left');
+  // var height = $('#cone').height();
+  // let width = $('#cone').width();
+
+  // console.log(height);
+  // console.log(width);
+
+}
+
+// setInterval(function(){
+//   move();
+
+// }, 1000/60);
 
 
 
@@ -48,15 +63,18 @@ var imageOffset = 0;
 function leftArrowPressed() {
   imageOffset -= 20;
   // margin-left -=2;
-  var el = document.getElementById("cone");
-  el.style.left = imageOffset + "px";
+  // var el = $('.cone');
+  var el = document.getElementsByClassName("cone")[0];
+
+   el.style.left = imageOffset + "px";
 
 }
 
 function rightArrowPressed() {
   imageOffset += 20;
-  var el = document.getElementById("cone");
+  var el = document.getElementsByClassName("cone")[0];
   el.style.left = imageOffset + "px";
+
 }
 
 
@@ -94,26 +112,10 @@ docReady();
 
 // another method to find x, y coordinates and width and height
 
-function move() {
-  // let x = $('#cone').css('left');
-  let y= $('#cone').css('left');
-  // var height = $('#cone').height();
-  // let width = $('#cone').width();
-  console.log(y);
-  // console.log(x);
-  // console.log(height);
-  // console.log(width);
-
-}
-
-// setInterval(function(){
-//   move();
-// }, 1000/60);
 
 
-function name() {
 
-}
+
 
 
 // Objects - Collision Detection
@@ -134,18 +136,8 @@ if (cone.x < scoop.x + scoop.width &&
    cone.height + cone.y > scoop.y) {
   console.log('detected');
     // collision detected!
-}
 
-// filling in the values
-// scoop values < cone values
-
-if (8 > -40 &&
-    85 < 180 &&
-    540 < 1330 &&
-    85 < 155) {
-    // collision detected!
-
-  console.log('detected for real');
+  // console.log('detected for real');
   var imageOffset1 = 0;
     return function () {
       return imageOffset1 -= 20;
@@ -189,5 +181,19 @@ var cone = [];
 var score = [];
 
 flavors.push();
+
+
+
+
+// }
+
+// // filling in the values
+// // scoop values < cone values
+
+// if (8 > -40 &&
+//     85 < 180 &&
+//     540 < 1330 &&
+//     85 < 155) {
+    // collision detected!
 
 
