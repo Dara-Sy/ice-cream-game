@@ -5,17 +5,28 @@ $(document).ready(function() {
 
 // MAKING THE ICE CREAM SCOOPS FALL DOWN
 
+// setTimeout(myFunction, 3000)
+
 
 function myMove() {
-  var elem = document.getElementById("scoop");
+  var elem = document.getElementById("scoop"); // vanilla
+  var elem1 = document.getElementById("scoop1"); // cookies n cream
+  var elem2 = document.getElementById("scoop2"); // mint chocolate
+  var elem3 = document.getElementById("scoop3"); // caramel
+  // var otherScoops = $('.scoop');
   var pos = 0;
-  var id = setInterval(frame, 10);
+  var id = setInterval(frame, 1);
   function frame() {
-    if (pos == 510) {
+
+    if (pos == 500) {
       clearInterval(id);
     } else {
       pos++;
       elem.style.marginTop = pos + 'px';
+      elem1.style.marginTop = pos + 'px';
+      elem2.style.marginTop = pos + 'px';
+      elem3.style.marginTop = pos + 'px';
+      // elem1.style.left = pos + 'px';
       // elem.style.left = pos + 'px';
     }
     // function sayHi() {
@@ -39,7 +50,7 @@ $('button').click(function(e) {
 
 });
 function move() {
-  let x = $('#scoop').css('margin-top');
+  // let x = $('#scoop').css('margin-top');
   let y= $('#cone').css('left');
   // var height = $('#cone').height();
   // let width = $('#cone').width();
@@ -49,10 +60,10 @@ function move() {
 
 }
 
-// setInterval(function(){
-//   move();
+setInterval(function(){
+  move();
 
-// }, 1000/60);
+}, 1000/60);
 
 
 
@@ -64,16 +75,28 @@ function leftArrowPressed() {
   imageOffset -= 20;
   // margin-left -=2;
   // var el = $('.cone');
-  var el = document.getElementsByClassName("cone")[0];
+  var el = $(".move");
+  console.log(el)
 
-   el.style.left = imageOffset + "px";
+  // cream is the scoop
+  // var cream = document.getElementsByClassName("cream")[0];
+  // var moveCont = document.getElementsByClassName("container")[0];
+  // cream.style.left = imageOffset + "px";
+  // moveCont.style.left = imageOffset + "px";
+  el.css("left",`${imageOffset}px`);
 
 }
 
 function rightArrowPressed() {
   imageOffset += 20;
-  var el = document.getElementsByClassName("cone")[0];
-  el.style.left = imageOffset + "px";
+  var el = $('.move');
+  // cream is the scoop
+  // var cream = document.getElementsByClassName("cream")[0];
+  // var moveCont = document.getElementsByClassName("container")[0];
+  // cream.style.left = imageOffset + "px";
+  // moveCont.style.left = imageOffset + "px";
+  // el.style.left = imageOffset + "px";
+  el.css("left",`${imageOffset}px`);
 
 }
 
@@ -126,30 +149,94 @@ var $scoop = $('#scoop');
 var scoop = document.querySelector('#scoop');
 var $cone = $('#cone');
 var cone = document.querySelector('#cone');
+// var cone = $('.cone');
 var $scoopRef = $('.scoopRef');
+var $falling = $('.falling');
+var $container = $('.container');
+
+
 
 
 function detectColl() {
-if (cone.x < scoop.x + scoop.width &&
-   cone.x + cone.width > scoop.x &&
-   cone.y < scoop.y + scoop.height &&
-   cone.height + cone.y > scoop.y) {
+  setInterval(function(){
+    let con =$('#cone')[0].getBoundingClientRect();
+    let scoo = $('#scoop')[0].getBoundingClientRect();
+    let scoo1 = $('#scoop1')[0].getBoundingClientRect();
+    let scoo2 = $('#scoop2')[0].getBoundingClientRect();
+    let scoo3 = $('#scoop3')[0].getBoundingClientRect();
+
+    // console.log(scoo.y);
+    // console.log(con.x);
+
+    // VANILLA
+
+  if (scoo.x < con.x + con.x + con.width &&
+   scoo.x +  scoo.x + scoo.width > con.x &&
+   scoo.y < con.y + con.y + con.height &&
+   scoo.height + scoo.y + scoo.y > con.y) {
   console.log('detected');
-    // collision detected!
 
-  // console.log('detected for real');
-  var imageOffset1 = 0;
-    return function () {
-      return imageOffset1 -= 20;
-      var scoopRef = document.querySelectorAll('.scoopRef');
-      scoopRef.style.left = imageOffset + "px";
-    }
+    // detect collision // collision detected!
+    // remove scoop from DOM - rem for remove
+    // var rem = document.querySelector('scoop');
+    // $falling.remove();
+    // prepend the scoop to the container with cone
+    // $container.prepend();
 
-} else {
+$("#scoop").addClass('move');
+$('#scoop').css("margin-left","50px");
+$('#scoop').css("bottom","200px");
+    //Sameer commented
+    // var co = document.querySelector('.cone');
+    // var scp = document.querySelector('.scoop');
+
+} // COOKIES N CREAM
+if (scoo1.x < con.x + con.x + con.width &&
+   scoo1.x +  scoo1.x + scoo.width > con.x &&
+   scoo1.y < con.y + con.y + con.height &&
+   scoo1.height + scoo1.y + scoo1.y > con.y){
+  console.log('detected too');
+
+$("#scoop1").addClass('move');
+$('#scoop1').css("margin-left","50px");
+$('#scoop1').css("bottom","250px");
+
+} // MINT N CHOCOLATE
+if (scoo2.x < con.x + con.x + con.width &&
+   scoo2.x +  scoo2.x + scoo.width > con.x &&
+   scoo2.y < con.y + con.y + con.height &&
+   scoo2.height + scoo2.y + scoo2.y > con.y){
+  console.log('detected too');
+
+$("#scoop2").addClass('move');
+$('#scoop2').css("margin-left","50px");
+$('#scoop2').css("bottom","300px");
+
+}
+// CARAMEL
+if (scoo3.x < con.x + con.x + con.width &&
+   scoo3.x +  scoo3.x + scoo.width > con.x &&
+   scoo3.y < con.y + con.y + con.height &&
+   scoo3.height + scoo3.y + scoo3.y > con.y){
+  console.log('detected too');
+
+$("#scoop3").addClass('move');
+$('#scoop3').css("margin-left","50px");
+$('#scoop3').css("bottom","350px");
+
+}
+else {
   // no collision
-  console.log('nothing');
+
+  // console.log('nothing');
+  // $falling.addClass('container');
+  // $cone.addClass('container');
+
   // document.getElementById("cone").style.border = "red";
   }
+
+}, 1000/60);
+
 
 };
 
@@ -161,15 +248,8 @@ detectColl();
 // keep getting error in console.log
 
 
-function leftArrowScoop() {
-  imageOffset -= 20;
-  // margin-left -=2;
-  let scoopRef = document.querySelectorAll('.scoopRef');
-      scoopRef.style.left = imageOffset + "px";
 
-}
-
-leftArrowScoop();
+// leftArrowScoop();
 
 // CREATING AN ARRAYS FOR ICE CREAM SCOOPS AND CONE
 // second option, since class name did not keep scoops on cone
@@ -181,19 +261,5 @@ var cone = [];
 var score = [];
 
 flavors.push();
-
-
-
-
-// }
-
-// // filling in the values
-// // scoop values < cone values
-
-// if (8 > -40 &&
-//     85 < 180 &&
-//     540 < 1330 &&
-//     85 < 155) {
-    // collision detected!
 
 

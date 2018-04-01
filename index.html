@@ -40,71 +40,33 @@
 
   <div id = "gameView"> <!--  parent div id -->
 
-    <section>
-
-  <!-- this is the cone -->
-  <img class = "cone" src = "pics/coneImg.png" height = "150">
+    <div class = "falling scoop">
+      <!-- div with 2 class names -->
     </div>
 
-    <!-- <body onload="myMove()"> -->
-      <!-- <button onclick="myMove()">Click Me</button> -->
 
-    <!-- this is the scoop -->
-    <div id ="myAnimation">
+  <!-- <div class = "container"> -->
 
-      <div class = "scoopRef">
-        <img id = "scoop" src = "pics/vanilla-.png" width="80">
-        </div>
-      <!-- <div class = "scoopRef">
-          <img class = "scoop1" src = "pics/mintc.png" width="80">
-      </div>
-       <div class = "scoopRef">
-          <img class = "scoop2" src = "pics/cc.png" width="80">
-      </div>
-      <div class = "scoopRef">
-          <img class = "scoop3" src = "pics/choco.png" width="80">
-      </div>
-      <div class = "scoopRef">
-          <img class = "scoop4" src = "pics/strawberry.png" width="80">
-      </div> <!-- closes scoopRef -->
+    <div id = "scoop" class = "scoop cream" > <img id="scoo" src = "pics/vanilla-.png" height = "80"></div>
 
-      </div> <!-- closes myAnimation -->
+    <div id = "scoop1" class = "scoop cream" > <img id="scoo" src = "pics/cc.png" height = "80"></div>
 
+    <div id = "scoop2" class = "scoop cream" > <img id="scoo" src = "pics/mintc.png" height = "80"></div>
 
+    <div id = "scoop3" class = "scoop cream" > <img id="scoo" src = "pics/caramel.png" height = "80"></div>
 
-
-
-    </section>
-
-</div>
-
-<div class = "collide"> </div>
-
-
-
-
-
-<!--
-// CONE
-// create a div for the CONE
-
-// make the cone an array on JS
-// create a key press function event
-// the key press event will do the following:
-// left arrow moves the cone to the left
-// right arrow moves the cone to the right
-
-// ICE CREAM SCOOPS
-// create many divs - one div for each ice cream scoop each
-// deciding whether to make the ice cream scoops circles... or use a scoop image
-// this will control the timing of the ice cream scoops falling on the screen
-
-// create a setInterval( function NAME, _________ set the ms time)
-// use a constructor function NAME to increment the y coordinates (moving down)
-// and cause the ice cream scoops to fall down the screen
+    <!-- <div class = "scoop"> <img src = "pics/vanilla-.png" height = "80"></div>
+    <div class = "scoop"> <img src = "pics/vanilla-.png" height = "80"></div>
  -->
 
+    <div class = "cone move" id = "cone"> <div id = "vanilla"> <img src = "pics/coneImg.png" height = "150"> </div> </div>
 
+
+<!--   </div> -->
+  <!-- closes the container -->
+
+</div>
+<!-- closes the gameView -->
 
 
 
