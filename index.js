@@ -91,7 +91,7 @@ function leftArrowPressed() {
   // margin-left -=2;
   // var el = $('.cone');
   var el = $(".move");
-  console.log(el)
+  //console.log(el)
 
   // cream is the scoop
   // var cream = document.getElementsByClassName("cream")[0];
@@ -160,17 +160,45 @@ docReady();
 // find coordinates of scoop
 // find coordinates of cone
 
-var $scoop = $('#scoop');
-var scoop = document.querySelector('#scoop');
-var $cone = $('#cone');
-var cone = document.querySelector('#cone');
-// var cone = $('.cone');
-var $scoopRef = $('.scoopRef');
-var $falling = $('.falling');
-var $container = $('.container');
+let $scoop;
+let scoop;
+let $cone;
+let cone;
+let $scoopRef;
+let $fallin;
+let $container;
+
+let scorePoints;
+
+let count;
 
 
+init();
+function init () {
+  $scoop = $('#scoop');
+  scoop = document.querySelector('#scoop');
+  $cone = $('#cone');
+  cone = document.querySelector('#cone');
+  // cone = $('.cone');
+  $scoopRef = $('.scoopRef');
+  $falling = $('.falling');
+  $container = $('.container');
 
+  scorePoints = 0;
+
+  count = 0;
+}
+
+function reload() {
+  // in reload clear the DOM, make it initial state and then call init
+  wind
+}
+
+
+let vanillaScore = false;
+// let cookNCreamScore = false;
+// let mintNChocoScore = false;
+// let caramelScore = false;
 
 function detectColl() {
   setInterval(function(){
@@ -179,17 +207,40 @@ function detectColl() {
     let scoo1 = $('#scoop1')[0].getBoundingClientRect();
     let scoo2 = $('#scoop2')[0].getBoundingClientRect();
     let scoo3 = $('#scoop3')[0].getBoundingClientRect();
-
+    // call the win alert
+    if (count === 4){
+        alert('You won!')
+        // $('body').append("<button class='replay'>Replay</button>")
+        // $(".replay").on('click', function() {
+        //   window.location.reload();
+        // });
+    }
     // console.log(scoo.y);
     // console.log(con.x);
 
     // VANILLA
+  if (scoo.x < con.x + con.width &&
+   scoo.x + scoo.width > con.x &&
+   scoo.y < con.y + con.height &&
+   scoo.height + scoo.y > con.y) {
 
-  if (scoo.x < con.x + con.x + con.width &&
-   scoo.x +  scoo.x + scoo.width > con.x &&
-   scoo.y < con.y + con.y + con.height &&
-   scoo.height + scoo.y + scoo.y > con.y) {
-  console.log('detected');
+  $('.count').text(++count);
+
+    console.log('Vanilla grabbed')
+    if (vanillaScore === false) {
+      console.log('vanillaScore = false');
+      console.log(`score is ${scorePoints}`)
+      scorePoints++;
+      console.log(`score applied and is now ${scorePoints}`)
+      vanillaScore = true;
+      console.log('vanillaScore is true')
+    }
+
+// score ++;
+
+  // console.log('Hey, 1st score', scorePoints);
+
+  // console.log('detected');
 
     // detect collision // collision detected!
     // remove scoop from DOM - rem for remove
@@ -201,45 +252,63 @@ function detectColl() {
 $("#scoop").addClass('move');
 $('#scoop').css("margin-left","50px");
 $('#scoop').css("bottom","200px");
-    //Sameer commented
-    // var co = document.querySelector('.cone');
-    // var scp = document.querySelector('.scoop');
+
 
 } // COOKIES N CREAM
-if (scoo1.x < con.x + con.x + con.width &&
-   scoo1.x +  scoo1.x + scoo.width > con.x &&
-   scoo1.y < con.y + con.y + con.height &&
-   scoo1.height + scoo1.y + scoo1.y > con.y){
-  console.log('detected too');
+if (scoo1.x < con.x + con.width &&
+   scoo1.x + scoo1.width > con.x &&
+   scoo1.y < con.y + con.height &&
+   scoo1.height + scoo1.y > con.y){
+   $('.count').text(++count);
+  //console.log('2nd', score);
+
+  // console.log('detected too');
+//score ++;
 
 $("#scoop1").addClass('move');
 $('#scoop1').css("margin-left","50px");
 $('#scoop1').css("bottom","250px");
 
+
+
 } // MINT N CHOCOLATE
-if (scoo2.x < con.x + con.x + con.width &&
-   scoo2.x +  scoo2.x + scoo.width > con.x &&
-   scoo2.y < con.y + con.y + con.height &&
-   scoo2.height + scoo2.y + scoo2.y > con.y){
+if (scoo2.x < con.x + con.width &&
+   scoo2.x + scoo.width > con.x &&
+   scoo2.y < con.y + con.height &&
+   scoo2.height + scoo2.y > con.y){
+  $('.count').text(++count);
+
+  //score ++;
   console.log('detected too');
 
 $("#scoop2").addClass('move');
 $('#scoop2').css("margin-left","50px");
 $('#scoop2').css("bottom","300px");
 
+
+
 }
 // CARAMEL
-if (scoo3.x < con.x + con.x + con.width &&
-   scoo3.x +  scoo3.x + scoo.width > con.x &&
-   scoo3.y < con.y + con.y + con.height &&
-   scoo3.height + scoo3.y + scoo3.y > con.y){
+if (scoo3.x < con.x + con.width &&
+   scoo3.x + scoo.width > con.x &&
+   scoo3.y < con.y + con.height &&
+   scoo3.height + scoo3.y > con.y){
+  $('.count').text(++count);
+
+  //score++;
+  //console.log(scorePoints);
+
   console.log('detected too');
 
 $("#scoop3").addClass('move');
 $('#scoop3').css("margin-left","50px");
 $('#scoop3').css("bottom","350px");
+// alert('You win');
+
+
 
 }
+
 else {
   // no collision
 
@@ -262,19 +331,97 @@ detectColl();
 // this does not work
 // keep getting error in console.log
 
+// SCORE COUNT
+function winScore() {
+  if (count === 4){
+    alert('You won!')
+  }
+}
+
+winScore();
+// function countUp(count) {
+//   var div_by = 5,
+//       speed = Math.round(count / div_by),
+//       $display = $('.count'),
+//       run_count = 1,
+//       int_speed = 1500;
+//       // int_speed = 1000/60;
 
 
-// leftArrowScoop();
 
-// CREATING AN ARRAYS FOR ICE CREAM SCOOPS AND CONE
-// second option, since class name did not keep scoops on cone
-// array flavors will help keep scoop on cone
-// array score will track score
 
-var flavors = [1, 2, 3, 4, 5];
-var cone = [];
-var score = [];
+//   var int = setInterval(function() {
 
-flavors.push();
+//     if(run_count < div_by){
+//       $display.text('Score: ' +speed * run_count);
+//       run_count ++;
+//       // alert('You win');
+//       // checkWin();
+//     // } if(display == 4) {
+//     //   alert('You win');
+//     }
+//      else if(parseInt($display.text()) < count) {
+//       var curr_count = parseInt(display.text()) + 1;
+//       display.text(curr_count);
+//       checkWin();
+//     } else {
+//       clearInterval(int);
+//     }
+//   }, int_speed);
+// }
 
+// countUp(5);
+
+
+// function win(){
+//   alert("Win!");
+// }
+// setTimeout(win, counter = 10000);
+
+// explode();
+// clearTimeout(explode);
+
+
+// function checkWin() {
+//   if (curr_count === 4 || run_count === 4) {
+//       alert('You win');
+//       console.log('win');
+//   } else {
+//     console.log('lose');
+//   }
+// }
+
+// checkWin();
+
+console.log(`score is ${scorePoints}`)
+
+// function revealScore() {
+//   let scoreString = score +'';
+//   for (let i = scoreString.length; i < 4; i++) {
+//     scoreString = '0' + scoreString;
+
+//   }
+
+//   $('h3').html*(`SCORE: $${scoreString}`);
+//   return scoreString;
+// }
+
+// if (detectColl (scoop, cone))
+
+
+//   score++
+
+// update to the DOM
+
+
+// create a function reset
+// whatever I do at the start, reset it and call it in the function
+// global object
+// reset fields
+// call that global object whenever I want to
+
+// update the global var to function
+
+// wrap up set up stuff into a function
+// call that function at the beginning and whenever I want to relod
 

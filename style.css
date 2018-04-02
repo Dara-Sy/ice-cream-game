@@ -86,13 +86,13 @@ button{
 
 #scoop1{
   position:absolute;
-  left: 80px;
+  left: 100px;
   /*z-index: 5;*/
 }
 
 #scoop2{
   position:absolute;
-  left: 150px;
+  left: 170px;
   /*z-index: 5;*/
 }
 
@@ -129,6 +129,61 @@ button{
   left: 35%;
 
 }
+
+
+
+.count {
+  position: relative;
+  margin: 40px 0;
+  padding: 14px 16px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  +border-radius(4px);
+  display: inline-block;
+  background: rgba(255,255,255,0);
+
+}
+
+
+
+
+
+/*SASS ????*/
+
+
+/*@import compass
+
+html
+  background: #2b2b2b
+
+body
+  text-align: center
+  color: #ffffff
+
+.count
+  position: relative
+  margin: 40px 0
+  padding: 14px 16px
+  font-size: 40px
+  line-height: 40px
+  font-weight: 600
+  font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased
+  +border-radius(4px)
+  display: inline-block
+  background: rgba(255,255,255,0.1)
+
+  &.glow
+    +text-shadow(0 0 4px #ffffff)*/
+
+
+
+
+
+
 
 
 
