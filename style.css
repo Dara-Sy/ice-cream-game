@@ -121,6 +121,15 @@ button{
 
 }
 
+#formView {
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 35%;
+
+}
+
 
 
 @media only screen and (max-width: 600px) {

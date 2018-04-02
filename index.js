@@ -37,18 +37,33 @@ function myMove() {
 }
 
 
-$('button').click(function(e) {
+$('.startButton').click(function(e) {
         $('#landingView').hide();
+        // $('#formView').hide();
+        $('#formView').show();
+        // $('#myAnimation').show();  // got a problem with IC showing up
+        // $('#gameView').show();
+
+        e.preventDefault();
+        // myMove();
+
+    });
+
+$('.submit').click(function(w) {
+        // $('#landingView').hide();
+        $('#formView').hide();
         $('#myAnimation').show();  // got a problem with IC showing up
         $('#gameView').show();
 
-        e.preventDefault();
+        w.preventDefault();
+        // call myMove, start game after submitting name
         myMove();
 
     });
 
 
 });
+
 function move() {
   // let x = $('#scoop').css('margin-top');
   let y= $('#cone').css('left');
