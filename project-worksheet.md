@@ -159,6 +159,84 @@ Use this section to include a brief code snippet of functionality that you are p
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.
 
+
+// function countUp(count) {
+//   var div_by = 5,
+//       speed = Math.round(count / div_by),
+//       $display = $('.count'),
+//       run_count = 1,
+//       int_speed = 1500;
+//       // int_speed = 1000/60;
+
+
+
+
+//   var int = setInterval(function() {
+
+//     if(run_count < div_by){
+//       $display.text('Score: ' +speed * run_count);
+//       run_count ++;
+//       // alert('You win');
+//       // checkWin();
+//     // } if(display == 4) {
+//     //   alert('You win');
+//     }
+//      else if(parseInt($display.text()) < count) {
+//       var curr_count = parseInt(display.text()) + 1;
+//       display.text(curr_count);
+//       checkWin();
+//     } else {
+//       clearInterval(int);
+//     }
+//   }, int_speed);
+// }
+
+// countUp(5);
+
+
+// function win(){
+//   alert("Win!");
+// }
+// setTimeout(win, counter = 10000);
+
+// explode();
+// clearTimeout(explode);
+
+
+// function checkWin() {
+//   if (curr_count === 4 || run_count === 4) {
+//       alert('You win');
+//       console.log('win');
+//   } else {
+//     console.log('lose');
+//   }
+// }
+
+// checkWin();
+
+console.log(`score is ${scorePoints}`)
+
+// function revealScore() {
+//   let scoreString = score +'';
+//   for (let i = scoreString.length; i < 4; i++) {
+//     scoreString = '0' + scoreString;
+
+//   }
+
+//   $('h3').html*(`SCORE: $${scoreString}`);
+//   return scoreString;
+// }
+// if (detectColl (scoop, cone))
+//   score++
+// update to the DOM
+// create a function reset
+// whatever I do at the start, reset it and call it in the function
+// global object
+// reset fields
+// call that global object whenever I want to
+// update the global var to function
+// wrap up set up stuff into a function
+// call that function at the beginning and whenever I want to relod
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: Missing comma after first object in sources {} object
