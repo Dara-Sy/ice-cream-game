@@ -26,7 +26,7 @@ The landing view will have a 'start game' button. The form will ask for the play
 
 This game only requires 1 player at a time. 
 
-In the game view, you will have a cone positioned at the bottom of the screen. It will have a key pressed function with the left and right arrows that will move the cone across the game view. Ice cream scoops of various flavors (colors) will fall from the top of the game view, as if it were raining ice cream. The goal to win is to catch or top 10 ice cream scoops on the cone. If the player misses 3 ice cream scoops that fall to the bottom of the screen, the player loses and it's game over. Whether win or lose, the player can choose to replay the game and start over. 
+In the game view, you will have a cone positioned at the bottom of the screen. It will have a key pressed function with the left and right arrows that will move the cone across the game view. Ice cream scoops of various flavors (colors) will fall from the top of the game view, as if it were raining ice cream. The goal to win is to catch or top 4 ice cream scoops on the cone. The player essentially wins the game.
 
 
 ## Wireframes
@@ -57,14 +57,13 @@ When the game is started, the player will have a cone positioned at the bottom o
 ### Playing The Game
 What will be the flow of the game, what will the user be expeted to do and what will the user expect from the game
 
-The goal to win is to catch or top 10 ice cream scoops on the cone. If the player misses 3 ice cream scoops that fall to the bottom of the screen, the player loses and it's game over. Whether win or lose, the player can choose to replay the game and start over. 
+The goal to win is to catch or top 4 ice cream scoops on the cone. The player will win the game.
 
 ### Winning The Game
 What does it look like when the game ends, what determines winning or losing?
 
-If the player misses 3 ice cream scoops that fall to the bottom of the screen, the player loses and it's game over. Whether win or lose, the player can choose to replay the game and start over.
 
-I will use collision detection to keep track of the ice cream scoops topped on the cone. I will also use an if else statement to keep track of the score incrementing or to end the game when the player misses 3 scoops. 
+I will use collision detection to keep track of the ice cream scoops topped on the cone. The player wins the game when 4 scoops are topped on the cone. 
 
 <!-- function collisionDetection() {
     for(c=0; c<iceCreamCount; c++) {
@@ -92,7 +91,7 @@ How will the user restart the game once it has been completed.
 
 Whether win or lose, the player can choose to replay the game and start over. 
 
-When the player wins, the alert shows up ('You win!'). When the player loses, the alert shows up ('You lose!'). There will be a 'replay' button that appears on the screen, which resets the game and allows the player to return to game view at the start and resets the score to 0. 
+When the player wins, the alert shows up ('You win!'). 
 
  
 
@@ -108,7 +107,7 @@ Include the full list of features that will be part of your MVP
 - Physics 
 - Score Count
 - Win / lose
-- Replay
+
 
 ## POST MVP
 
@@ -140,8 +139,7 @@ Helper functions should be generic enought that they can be reused in other appl
 
 | Function | Description | 
 | .setInterval() | This will run a function multiple times every X amount of milliseconds
-| .push() | This will push the number of ice cream scoops on an array cone[] 
-| .bind() | Attaches an event handler to an element  
+| .push() | This will push the number of ice cream scoops  
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
